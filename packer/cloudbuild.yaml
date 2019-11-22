@@ -12,9 +12,10 @@ steps:
         '--build-arg', 'PACKER_VERSION_SHA256SUM=${_PACKER_VERSION_SHA256SUM}',
         '.']
 substitutions:
-  _PACKER_VERSION: 1.2.4
-  _PACKER_VERSION_SHA256SUM: 258d1baa23498932baede9b40f2eca4ac363b86b32487b36f48f5102630e9fbb
+  _PACKER_VERSION: 1.4.5
+  _PACKER_VERSION_SHA256SUM: 30da8dab9c526a6d15b037e2234f6f12cf3accfad77eb2c130738ec1a54cab6d
 
 images:
 - 'gcr.io/$PROJECT_ID/packer:latest'
 - 'gcr.io/$PROJECT_ID/packer:$_PACKER_VERSION'
+tags: ['cloud-builders-community']
